@@ -1,0 +1,17 @@
+body { background-color: #B0C4FC;
+}
+
+h1 {text-align: center;
+font-size: 400%;
+}
+
+
+
+#yourbmi {width: 40%;
+	margin-left: 200px;
+}
+
+.floatright { float: right;
+margin-right: 200px;
+border-width: 5px;
+border-style: double; }

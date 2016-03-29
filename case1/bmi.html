@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<title>BMI Calculator</title>
+	<meta name="description" content="BMI Calculator" />
+	<meta name="author" content="Barbara Baird"/>
+	<link type="text/css" rel="stylesheet" href="bmi.css" media="all" />
+
+
+</head>
+<body>
+
+
+<h1> BMI Calculator </h1>
+
+<img class="floatright" src="stand.jpg" alt="Where Do You Stand" />
+
+<form id="yourbmi">
+<p> Please enter your weight in pounds: </p>
+<input  type="text" name="weight" id="weight" placeholder="weight" />
+
+<br>
+<br>
+
+
+<p>Please enter your height in inches: </p>
+<input type="text" name="height" id="height" placeholder="height"/>
+
+<br>
+<br>
+
+
+  <input id="calc" type="button" value="Calculate BMI" onclick="calcBMI();" />
+
+
+  <input id="clear" type="button" value="clear" onclick="clearForm();"/>
+
+<h3> Your BMI is:</h3>	
+  <input type="number" name="bmi" id="bmi" placeholder="bmi"/>
+
+  </form>
+
+
+        
+
+        <script>
+
+
+            function calcBMI() {
+                var yourWeight = document.getElementById("weight").value;
+                var yourHeight = document.getElementById("height").value;
+				var bmi = parseInt ((yourWeight * 703) /(yourHeight*yourHeight));
+				document.getElementById("bmi").value =bmi;
+			}	
+
+			function clearForm() {   
+   				document.getElementById("yourbmi").reset();
+			}
+			
+
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<title>Heart Rate Calculator</title>
+	<meta name="description" content="Heart Rate Calculator" />
+	<meta name="author" content="Barbara Baird"/>
+	<link type="text/css" rel="stylesheet" href="heart.css" media="all" />
+
+
+</head>
+<body>
+
+
+<h1> Heart Rate Calculator </h1>
+
+<img class="floatright" src="stand.jpg" alt="Where Do You Stand" />
+
+<form id="heartrate">
+<p> Please enter your age in years: </p>
+<input  type="text" name="age" id="age" placeholder="age" />
+
+<br>
+<br>
+
+
+
+
+
+  <input id="calc" type="button" value="Calculate" onclick="calcHeartRate();" />
+
+
+  
+
+<h3> Your Target Heart Rate Range is:</h3>	
+  <input type="text" name="range" id="range" placeholder="range"/>
+
+  <br>
+  <br>
+
+
+    <input id="clear" type="button" value="clear" onclick="clearForm();"/>
+
+  </form>
+
+
+        
+
+        <script>
+
+
+            function calcHeartRate() {
+                var yourAge = document.getElementById("age").value;
+               
+				var max =  (220 - yourAge);
+				var targetMin = parseInt  (max * .5);
+				var targetMax = parseInt (max * .85);
+				var targetRange=  (targetMin + " - " + targetMax + " beats per minute")
+
+				document.getElementById("range").value = targetRange;
+			}	
+
+			function clearForm() {   
+   				document.getElementById("heartrate").reset();
+			}
+			
+
+		</script>
+</body>
+</html>
+
